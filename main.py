@@ -2,7 +2,7 @@ import os
 
 import discord
 
-import config
+from TOKEN import bot_token # лучше прятать токен в .env,
 
 # intents = disnake.Intents.all()
 
@@ -20,6 +20,6 @@ if __name__ == '__main__':
 
     # load_dotenv(find_dotenv())
     try:
-        bot.run(config.BOT_TOKEN)
+        bot.run(bot_token)
     except Exception as e:
         print(f'Произошла ошибка в main.py: {e}')
